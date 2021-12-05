@@ -1,12 +1,11 @@
 FROM python:3.9-alpine
 
-WORKDIR /app
+WORKDIR /code
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY ./requirements.txt /code/requirements.txt
 
-COPY . .
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-EXPOSE 5000
+COPY ./app /code/app
 
-CMD ["python", "app.py"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
