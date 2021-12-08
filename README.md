@@ -8,9 +8,8 @@ Kubectl-api is an API based on kubectl and FastAPI. It is supposed to be deploye
 In order to install kubectl-api we can use the Helm chart in this repo, so, provided Helm 3 and kubectl is installed and properly configured on your local machine, you can run it as follows:
 
 ```
-cd charts
 kubectl create ns kubectl-api
-helm install my-release ./kubectl-api --namespace kubectl-api 
+helm install my-release ./chart/kubectl-api --namespace kubectl-api 
 ```
 
 
