@@ -1,6 +1,6 @@
 # kubectl-api
 
-Kubectl-api is an API based on kubectl and FastAPI. It is supposed to be deployed in a Kubernetes cluster, such that different services and perhaps users can make use of it for creating/configuring/deleting resources from **within** the cluster by accessing this API, where we can execute any kubectl command. 
+Kubectl-api is an API based on kubectl and FastAPI. It is supposed to be deployed in a Kubernetes cluster, such that different services and perhaps users can make use of it for creating/configuring/deleting resources from **within** the cluster by accessing this API, where we can execute any kubectl command. Please find the registry [here](https://hub.docker.com/r/scraiber/kubectl-api).
 
 
 ## Installing kubectl-api in a cluster
