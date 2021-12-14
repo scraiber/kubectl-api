@@ -54,19 +54,18 @@ jobs:
             docker push $IMAGE_NAME:latest
             docker push $IMAGE_NAME:$IMAGE_TAG
 workflows:
-  version: 2
   build-master:
     jobs:
       - build:
           filters:
             branches:
-              only: master
+              only: main
       - publish-latest:
           requires:
             - build
           filters:
             branches:
-              only: master
+              only: main
   build-tags:
     jobs:
       - build:
